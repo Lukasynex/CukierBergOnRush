@@ -29,8 +29,9 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         FacebookSdk.sdkInitialize(this.getApplicationContext());
+
+        setContentView(R.layout.activity_main);
         loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setReadPermissions("user_friends");
         callbackManager = CallbackManager.Factory.create();
